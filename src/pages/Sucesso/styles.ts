@@ -1,11 +1,12 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+
 export const ContainerComponent = styled.div `
 height:100%;
 display:flex;
 flex-direction:column;
-justify-content:space-between;
 padding-left:20px;
 padding-right:20px;
 padding-top:50px;
-padding-bottom:10px;
+padding-bottom:120px;
+justify-content:space-between;
 `
