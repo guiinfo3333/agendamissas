@@ -11,7 +11,7 @@ background-color:var(--primary);
 height:100px !important;
 padding-top:10px;
 margin-left:10px;
-border:1px solid var(--terciary);
+box-shadow:0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
 &.active{
     border: 1px solid var(--primary);
     font-weight:700;
