@@ -3,7 +3,7 @@ import React from 'react';
 import Title  from '../../components/Title/title';
 import {ContainerComponent} from './styles'
 import {Block} from '@material-ui/icons';
-import { blue } from '@material-ui/core/colors';
+import {blue} from '@material-ui/core/colors';
 
 const Error: React.FC = () => {
   return (

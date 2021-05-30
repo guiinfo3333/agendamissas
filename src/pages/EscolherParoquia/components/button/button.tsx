@@ -3,7 +3,7 @@ import {ButtonComponent} from './styles'
 
 export interface Props{
     name: string;
-    selected?: boolean; 
+    selected?: Boolean; 
     onclick: () => void;
 }
 
@@ -12,6 +12,7 @@ const Button : React.FC<Props> = ({
     selected,
     onclick
 }) =>{
+
     return (
           <ButtonComponent className={selected?"active":''}  onClick={onclick}>
               {name}
