@@ -8,7 +8,7 @@ import axios from '../../services/apis';
 interface Igrejas{
     id:number;
     nome:string;
-    endereco:string;
+    endereco:Date;
 }
 
 const EscolherParoquia : React.FC = () =>{
@@ -17,10 +17,6 @@ const EscolherParoquia : React.FC = () =>{
     const[selecionado,setSelecionado]=useState<Boolean[]>([])
 
     useEffect(()=>RetornaIgreja(),[])
-
-    useEffect(()=>{
-     console.log("mudou")
-    },[selecionado])
 
     function RetornaIgreja(){
         axios.get<Igrejas[]>(`igreja`).then(res=>{
@@ -33,13 +29,13 @@ const EscolherParoquia : React.FC = () =>{
         })      
     }
 
-
     function ModificaSelecionado(numero:number){
+        var arraytemp=[];
         for(var i=0;i<selecionado.length;i++){
-            selecionado[i]=false 
+            arraytemp.push(false) 
         }
-        selecionado[numero]=true
-        setSelecionado(selecionado)
+        arraytemp[numero]=true
+        setSelecionado(arraytemp)
     }
 
     return (    

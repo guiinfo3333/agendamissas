@@ -17,9 +17,14 @@ font-size:15px;
 border-radius:8px;
 box-shadow:0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
 &.active{
+    border: 2px solid var(--primary);
     font-family: 'Noto Sans',sans-serif;
     font-weight:700;
     background-color:var(--secondary);
     color:var(--primary)
 }
+&:hover{
+cursor: pointer;
+}
+
 `;

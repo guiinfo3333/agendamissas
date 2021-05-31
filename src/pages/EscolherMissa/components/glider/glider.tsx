@@ -9,9 +9,15 @@ export interface PaneProps{
     className:string; 
 }
 
+export interface Props{
+  lista:React.FC[];
+}
 
 
-const Example = () => {
+
+const Carrousel:React.FC<Props>= ({
+  lista
+}) => {
   const gliderRef = React.useRef<GliderMethods>(null);
 
   return (
@@ -26,4 +32,4 @@ const Example = () => {
     </>
   );
 };
-export default Example;
+export default Carrousel;
