@@ -3,19 +3,21 @@ import React from 'react';
 import { CardComponent, TitleCard,TitleHorario } from './styles';
 
 export interface Props{
-  data: string;
-  horario: string; 
+  horario: string;
+  dia: string; 
+  mes: string; 
   selected?:boolean;
 }
 
 const Card: React.FC<Props>= ({
-  data,
   horario,
+  dia,
+  mes,
   selected
 }) => {
   return (
     <CardComponent className={selected?"active":''}>
-        <TitleCard className={selected?"active":''}>{data}</TitleCard>
+        <TitleCard className={selected?"active":''}>{dia} {mes}</TitleCard>
         <TitleHorario className={selected?"active":''}>{horario}</TitleHorario>
     </CardComponent>
   );
